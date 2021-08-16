@@ -70,7 +70,7 @@ public class ChatRace extends Race {
             if (player.getGameMode() == GameMode.CREATIVE) return;
         }
         World world = player.getWorld();
-        if (!raceManager.isWorldAllowed(world.toString())) return;
+        if (!raceManager.isWorldAllowed(world.getName())) return;
         String message = Printer.stripColors(e.getMessage());
         if (raceManager.startsWithForbiddenCommand(message)) return;
         if (!message.equals(wordToGuess.getWord())) return;

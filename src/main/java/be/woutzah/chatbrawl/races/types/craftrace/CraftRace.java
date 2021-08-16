@@ -102,7 +102,7 @@ public class CraftRace extends ContestantRace {
             if (player.getGameMode() == GameMode.CREATIVE) return;
         }
         World world = player.getWorld();
-        if (!raceManager.isWorldAllowed(world.toString())) return;
+        if (!raceManager.isWorldAllowed(world.getName())) return;
         if (!(e.getWhoClicked().getInventory().firstEmpty() == -1)) {
             if (e.getSlotType() == InventoryType.SlotType.RESULT) {
                 ItemStack craftedItemStack;

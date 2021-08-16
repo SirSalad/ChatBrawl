@@ -104,7 +104,7 @@ public class BlockRace extends ContestantRace {
             if (player.getGameMode() == GameMode.CREATIVE) return;
         }
         World world = player.getWorld();
-        if (!raceManager.isWorldAllowed(world.toString())) return;
+        if (!raceManager.isWorldAllowed(world.getName())) return;
         Block minedBlock = e.getBlock();
         if (minedBlock.getType().equals(blockEntry.getMaterial())) {
             UUID uuid = player.getUniqueId();

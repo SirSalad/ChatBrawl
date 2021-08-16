@@ -105,7 +105,7 @@ public class HuntRace extends ContestantRace {
 			if (player.getGameMode() == GameMode.CREATIVE) return;
 		}
 		World world = player.getWorld();
-		if (!raceManager.isWorldAllowed(world.toString())) return;
+		if (!raceManager.isWorldAllowed(world.getName())) return;
 		EntityType killedEntityType = e.getEntity().getType();
 		if (killedEntityType.equals(huntEntry.getEntityType())) {
 			UUID uuid = player.getUniqueId();

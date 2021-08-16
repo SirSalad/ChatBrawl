@@ -102,7 +102,7 @@ public class FoodRace extends ContestantRace {
             if (player.getGameMode() == GameMode.CREATIVE) return;
         }
         World world = player.getWorld();
-        if (!raceManager.isWorldAllowed(world.toString())) return;
+        if (!raceManager.isWorldAllowed(world.getName())) return;
         ItemStack consumedItemstack = e.getItem();
         if (consumedItemstack.getType().equals(foodEntry.getMaterial())) {
             UUID uuid = player.getUniqueId();

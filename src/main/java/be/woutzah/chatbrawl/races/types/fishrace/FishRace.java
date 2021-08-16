@@ -104,7 +104,7 @@ public class FishRace extends ContestantRace {
             if (player.getGameMode() == GameMode.CREATIVE) return;
         }
         World world = player.getWorld();
-        if (!raceManager.isWorldAllowed(world.toString())) return;
+        if (!raceManager.isWorldAllowed(world.getName())) return;
         if (e.getState().equals(PlayerFishEvent.State.CAUGHT_FISH)) {
             Item caughtItem = (Item) e.getCaught();
             if (caughtItem == null) return;
